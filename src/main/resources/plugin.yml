@@ -1,0 +1,55 @@
+name: Duels
+version: ${version}
+main: me.skeletica.duels.DuelsPlugin
+api-version: '1.21'
+author: Skeletica
+description: Paper duels plugin with kits, rounds, arenas and stats.
+commands:
+  duel:
+    description: Challenge a player.
+    usage: /duel <player>
+  duels:
+    description: Open the duel menu.
+    usage: /duels [player]
+  duelaccept:
+    description: Accept a duel request.
+    usage: /duelaccept [player]
+  duelrematch:
+    description: Rematch your most recent opponent.
+    usage: /duelrematch <player>
+  dueldeny:
+    description: Deny a duel request.
+    usage: /dueldeny [player]
+  stats:
+    description: View duel statistics.
+    usage: /stats [player]
+  matches:
+    description: View your duel match history.
+    usage: /matches [player]
+  leaderboard:
+    description: Spawn the top 10 duel leaderboard NPC.
+    usage: /leaderboard
+  challenge:
+    description: Challenge players to a duel in an admin kit.
+    usage: /challenge <kit>
+  challengeaccept:
+    description: Accept a public duel challenge.
+    usage: /challengeaccept <player>
+  spectate:
+    description: Spectate a live duel.
+    usage: /spectate <player>|leave
+  kit:
+    description: Open the custom kit editor.
+    usage: /kit editor
+  customkit:
+    description: Manage custom kits.
+    usage: /customkit <save|delete|list> [name]
+  kitadmin:
+    description: Manage default kits.
+    usage: /kitadmin <create|set|delete|list|reload> <name>
+  arena:
+    description: Manage duel arenas.
+    usage: /arena <create|setpos1|setpos2|delete|list> [name]
+permissions:
+  duels.admin:
+    default: op

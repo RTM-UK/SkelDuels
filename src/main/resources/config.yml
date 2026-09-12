@@ -1,0 +1,8 @@
+settings:
+  request-timeout-seconds: 30
+  default-rounds: 1
+  countdown-seconds: 3
+  restore-location: true
+  stats-npc-duration-seconds: 30
+messages:
+  prefix: '&8[&bDuels&8] &7'
