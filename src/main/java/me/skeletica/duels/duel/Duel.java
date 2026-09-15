@@ -70,6 +70,7 @@ public class Duel {
         p2.getInventory().clear();
         p1.teleport(arena.pos1());
         p2.teleport(arena.pos2());
+        plugin.scoreboard().show(this);
         countdown();
     }
 
@@ -167,6 +168,7 @@ public class Duel {
         }
 
         plugin.stats().recordRound(winner.getUniqueId(), loser.getUniqueId());
+        plugin.scoreboard().update(this);
 
         int needed = (rounds + 1) / 2;
         if (scoreA >= needed || scoreB >= needed) {
@@ -222,6 +224,7 @@ public class Duel {
             plugin.duelManager().rememberFinished(this);
         }
 
+        plugin.scoreboard().hide(this);
         plugin.spectators().removeForDuel(this);
 
         if (p1 != null) snapA.restore(p1);
